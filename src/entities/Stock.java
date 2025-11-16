@@ -76,7 +76,7 @@ public class Stock {
         || close == null
         || high == null
         || low == null) {
-            throw new IllegalStateException("We couldnt find stcok with ticker:" + ticker)
+            throw new IllegalStateException("We couldnt find stcok with ticker:" + ticker);
         }
     }
 }

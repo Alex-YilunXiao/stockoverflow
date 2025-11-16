@@ -13,6 +13,7 @@ import java.beans.PropertyChangeListener;
 public class MainMenuView extends JPanel implements ActionListener, PropertyChangeListener {
 
     private final MainMenuViewModel mainMenuViewModel;
+    private final MainMenuController mainMenuController;
 
     private final JButton stockButton = new JButton("Analyze Single Stock");
     private final JButton analyzePortfolioButton = new JButton("Analyze Portfolio");
@@ -25,6 +26,8 @@ public class MainMenuView extends JPanel implements ActionListener, PropertyChan
         //noteName.setAlignmentX(Component.CENTER_ALIGNMENT); ADD DATE HERE TOO
         this.mainMenuViewModel = mainMenuViewModel;
         this.mainMenuViewModel.addPropertyChangeListener(this);
+        this.mainMenuController = null;
+
 
         final JPanel buttons = new JPanel();
         buttons.add(stockButton);
@@ -72,7 +75,7 @@ public class MainMenuView extends JPanel implements ActionListener, PropertyChan
         exitButton.addActionListener(
                 evt -> {
                     if (evt.getSource().equals(exitButton)) {
-                        MainMenuController.execute("exit"); //fix this later
+                        mainMenuController.execute("exit"); //fix this later
 
                     }
                 }
