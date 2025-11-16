@@ -31,6 +31,7 @@ public class MainMenuInteractor implements MainMenuInputBoundary{
     @Override
     public void executeExit() {
         mainMenuOutputBoundary.prepareSuccessView("we went to different view");
+        System.exit(0);
     }
 
 

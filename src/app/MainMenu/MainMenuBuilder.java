@@ -1,17 +1,22 @@
 package app.MainMenu;
 
+import interface_adapter.ViewManagerModel;
+import interface_adapter.change_view.ChangeViewController;
 import interface_adapter.mainmenu.MainMenuViewModel;
+import use_case.mainmenu.MainMenuInteractor;
 import view.MainMenuView;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class MainMenuBuilder {
-    public static Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-    public static final double WIDTH = screenSize.getWidth();
-    public static final double HEIGHT = screenSize.getHeight();
-    //private NoteDataAccessInterface noteDAO;
-    private MainMenuViewModel mainMenuViewModel = new MainMenuViewModel();
+    private static final Dimension SCREENSIZE = Toolkit.getDefaultToolkit().getScreenSize();
+    public static final double WIDTH = SCREENSIZE.getWidth();
+    public static final double HEIGHT = SCREENSIZE.getHeight();
+    private final ViewManagerModel viewManagerModel = new ViewManagerModel();
+
+    // private NoteDataAccessInterface noteDAO;
+    private MainMenuViewModel mainMenuViewModel;
     private MainMenuView mainMenuView;
 
     public MainMenuBuilder addMainView() {

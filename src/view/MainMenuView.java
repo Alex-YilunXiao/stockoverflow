@@ -12,8 +12,10 @@ import java.beans.PropertyChangeListener;
 
 public class MainMenuView extends JPanel implements ActionListener, PropertyChangeListener {
 
+    private final String viewName = "MainMenu";
     private final MainMenuViewModel mainMenuViewModel;
-    private final MainMenuController mainMenuController;
+
+    private MainMenuController mainMenuController;
 
     private final JButton stockButton = new JButton("Analyze Single Stock");
     private final JButton analyzePortfolioButton = new JButton("Analyze Portfolio");
@@ -28,13 +30,13 @@ public class MainMenuView extends JPanel implements ActionListener, PropertyChan
         this.mainMenuViewModel.addPropertyChangeListener(this);
         this.mainMenuController = null;
 
-
         final JPanel buttons = new JPanel();
         buttons.add(stockButton);
         buttons.add(analyzePortfolioButton);
         buttons.add(createPortfolioButton);
         buttons.add(historyStockButton);
         buttons.add(exitButton);
+
 
         stockButton.addActionListener(
                 evt -> {
@@ -87,6 +89,13 @@ public class MainMenuView extends JPanel implements ActionListener, PropertyChan
         this.add(buttons);
     }
 
+    public String getViewName() {
+        return viewName;
+    }
+
+    public void setMainMenuController(MainMenuController mainMenuController) {
+        this.mainMenuController = mainMenuController;
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
