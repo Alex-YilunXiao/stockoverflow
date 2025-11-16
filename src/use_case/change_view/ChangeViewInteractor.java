@@ -2,21 +2,21 @@ package use_case.change_view;
 
 public class ChangeViewInteractor implements ChangeViewInputBoundary {
 
-    private final ChangeViewOutputBoundary changeScreenOutputBoundary;
+    private final ChangeViewOutputBoundary changeScreenPresenter;
 
-    public ChangeViewInteractor(ChangeViewOutputBoundary changeScreenOutputBoundary){
-        this.changeScreenOutputBoundary = changeScreenOutputBoundary;
+    public ChangeViewInteractor(ChangeViewOutputBoundary changeScreenPresenter) {
+        this.changeScreenPresenter = changeScreenPresenter;
     }
 
     @Override
     public void changeToMainMenu() {
         final ChangeViewOutputData outputData = new ChangeViewOutputData("MainMenu");
-        changeScreenOutputBoundary.prepareView(outputData);
+        changeScreenPresenter.prepareView(outputData);
     }
 
     @Override
     public void changeToCreatePortfolio() {
         final ChangeViewOutputData outputData = new ChangeViewOutputData("CreatePortfolioMenu");
-        changeScreenOutputBoundary.prepareView(outputData);
+        changeScreenPresenter.prepareView(outputData);
     }
 }

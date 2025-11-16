@@ -6,11 +6,8 @@ import use_case.mainmenu.MainMenuInputBoundary;
 
 public class MainMenuController {
     private final MainMenuInputBoundary mainMenuInteractor;
-    private final ChangeViewController changeViewController;
-
-    public MainMenuController(MainMenuInputBoundary mainMenuInteractor, ChangeViewController changeViewController) {
+    public MainMenuController(MainMenuInputBoundary mainMenuInteractor) {
         this.mainMenuInteractor = mainMenuInteractor;
-        this.changeViewController = changeViewController;
     }
 
     /**
@@ -21,17 +18,6 @@ public class MainMenuController {
         switch(command) {
             case "exit":
                 mainMenuInteractor.executeExit();
-                break;
-        }
-
-    }
-    public void changeView(String viewName) {
-        switch(viewName) {
-            case "MainMenu":
-                changeViewController.onMainMenuClick();
-                break;
-            case "CreatePortfolioMenu":
-                changeViewController.onMainMenuClick();
                 break;
         }
 

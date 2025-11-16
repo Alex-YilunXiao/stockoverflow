@@ -14,7 +14,7 @@ public class ChangeViewPresenter implements ChangeViewOutputBoundary {
 
     @Override
     public void prepareView(ChangeViewOutputData data) {
-        viewManagerModel.setState(data.getViewName());
-        viewManagerModel.firePropertyChanged();
+        viewManagerModel.setActiveView(data.getViewName());
+        System.out.println("VIEW MODEL SET VIEW TO: " + data.getViewName());
     }
 }

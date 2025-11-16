@@ -1,5 +1,6 @@
 package view;
 
+import interface_adapter.change_view.ChangeViewController;
 import interface_adapter.mainmenu.MainMenuController;
 import interface_adapter.mainmenu.MainMenuViewModel;
 
@@ -16,6 +17,7 @@ public class MainMenuView extends JPanel implements ActionListener, PropertyChan
     private final MainMenuViewModel mainMenuViewModel;
 
     private MainMenuController mainMenuController;
+    private ChangeViewController changeViewController;
 
     private final JButton stockButton = new JButton("Analyze Single Stock");
     private final JButton analyzePortfolioButton = new JButton("Analyze Portfolio");
@@ -29,6 +31,7 @@ public class MainMenuView extends JPanel implements ActionListener, PropertyChan
         this.mainMenuViewModel = mainMenuViewModel;
         this.mainMenuViewModel.addPropertyChangeListener(this);
         this.mainMenuController = null;
+        this.changeViewController = null;
 
         final JPanel buttons = new JPanel();
         buttons.add(stockButton);
@@ -36,7 +39,6 @@ public class MainMenuView extends JPanel implements ActionListener, PropertyChan
         buttons.add(createPortfolioButton);
         buttons.add(historyStockButton);
         buttons.add(exitButton);
-
 
         stockButton.addActionListener(
                 evt -> {
@@ -59,7 +61,7 @@ public class MainMenuView extends JPanel implements ActionListener, PropertyChan
         createPortfolioButton.addActionListener(
                 evt -> {
                     if (evt.getSource().equals(createPortfolioButton)) {
-                        //MainMenuController.execute(noteInputField.getText());
+                        changeViewController.changeView("CreatePortfolioMenu");
 
                     }
                 }
@@ -95,6 +97,10 @@ public class MainMenuView extends JPanel implements ActionListener, PropertyChan
 
     public void setMainMenuController(MainMenuController mainMenuController) {
         this.mainMenuController = mainMenuController;
+    }
+
+    public void setChangeViewController(ChangeViewController changeViewController) {
+        this.changeViewController = changeViewController;
     }
 
     @Override
