@@ -19,12 +19,11 @@ public class MainMenuView extends JPanel implements ActionListener, PropertyChan
     private MainMenuController mainMenuController;
     private ChangeViewController changeViewController;
 
-    private final JButton stockButton = new JButton("Analyze Single Stock");
-    private final JButton analyzePortfolioButton = new JButton("Analyze Portfolio");
-    private final JButton createPortfolioButton = new JButton("Create/Import Portfolio");
-    private final JButton historyStockButton = new JButton("History Single Stock");
-    private final JButton exitButton = new JButton("Exit");
-
+    private final JButton stockButton = new JButton(MainMenuViewModel.STOCK_BUTTON_LABEL);
+    private final JButton analyzePortfolioButton = new JButton(MainMenuViewModel.PORTFOLIO_BUTTON_LABEL);
+    private final JButton createPortfolioButton = new JButton(MainMenuViewModel.CREATE_PORTFOLIO_BUTTON_LABEL);
+    private final JButton historyStockButton = new JButton(MainMenuViewModel.HISTORY_BUTTON_LABEL);
+    private final JButton exitButton = new JButton(MainMenuViewModel.EXIT_BUTTON_LABEL);
 
     public MainMenuView(MainMenuViewModel mainMenuViewModel) {
         //noteName.setAlignmentX(Component.CENTER_ALIGNMENT); ADD DATE HERE TOO
