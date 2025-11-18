@@ -1,10 +1,9 @@
-package main.java.interface_adapter.mainmenu;
+package interface_adapter.mainmenu;
 
-import main.java.use_case.mainmenu.MainMenuInputBoundary;
+import use_case.mainmenu.MainMenuInputBoundary;
 
 public class MainMenuController {
     private final MainMenuInputBoundary mainMenuInteractor;
-
     public MainMenuController(MainMenuInputBoundary mainMenuInteractor) {
         this.mainMenuInteractor = mainMenuInteractor;
     }
@@ -17,6 +16,7 @@ public class MainMenuController {
         switch(command) {
             case "exit":
                 mainMenuInteractor.executeExit();
+                break;
         }
 
     }

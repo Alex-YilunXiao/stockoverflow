@@ -1,7 +1,7 @@
-package main.java.interface_adapter.portfolio;
+package interface_adapter.portfolio;
 
-import main.java.entities.Portfolio.Portfolio;
-import main.java.use_case.portfolio.PortfolioMenuOutputBoundary;
+import entities.Portfolio.Portfolio;
+import use_case.portfolio.PortfolioMenuOutputBoundary;
 
 public class PortfolioMenuPresenter implements PortfolioMenuOutputBoundary {
     private final PortfolioMenuViewModel portfolioMenuViewModel;

@@ -1,7 +1,7 @@
-package main.java.interface_adapter.portfolio.addStock;
+package interface_adapter.portfolio.addStock;
 
-import main.java.entities.Portfolio.Portfolio;
-import main.java.entities.Stock;
+import entities.Portfolio.Portfolio;
+import entities.Stock;
 import lombok.Getter;
 import lombok.Setter;
 

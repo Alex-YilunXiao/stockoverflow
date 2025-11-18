@@ -1,7 +1,7 @@
-package main.java.interface_adapter.portfolio.addStock;
+package interface_adapter.portfolio.addStock;
 
-import main.java.entities.Portfolio.Portfolio;
-import main.java.interface_adapter.ViewModel;
+import entities.Portfolio.Portfolio;
+import interface_adapter.ViewModel;
 
 public class AddStockMenuViewModel extends ViewModel<AddStockMenuState> {
     public AddStockMenuViewModel(Portfolio portfolio) {

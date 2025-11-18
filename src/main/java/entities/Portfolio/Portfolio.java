@@ -1,7 +1,7 @@
-package main.java.entities.Portfolio;
+package entities.Portfolio;
 
-import main.java.entities.Simulation;
-import main.java.entities.Stock;
+import entities.Simulation;
+import entities.Stock;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

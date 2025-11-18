@@ -1,8 +1,8 @@
-package main.java.view;
+package view;
 
-import main.java.entities.Portfolio.Portfolio;
-import main.java.interface_adapter.portfolio.PortfolioMenuController;
-import main.java.interface_adapter.portfolio.PortfolioMenuViewModel;
+import entities.Portfolio.Portfolio;
+import interface_adapter.portfolio.PortfolioMenuController;
+import interface_adapter.portfolio.PortfolioMenuViewModel;
 import lombok.Getter;
 
 import javax.swing.*;

@@ -1,7 +1,7 @@
-package main.java.interface_adapter.portfolio;
+package interface_adapter.portfolio;
 
 import lombok.Getter;
-import main.java.use_case.portfolio.PortfolioMenuInputBoundary;
+import use_case.portfolio.PortfolioMenuInputBoundary;
 
 public class PortfolioMenuController {
     @Getter

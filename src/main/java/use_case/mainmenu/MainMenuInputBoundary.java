@@ -1,4 +1,4 @@
-package main.java.use_case.mainmenu;
+package use_case.mainmenu;
 
 public interface MainMenuInputBoundary {
 

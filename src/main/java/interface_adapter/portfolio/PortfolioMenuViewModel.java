@@ -1,6 +1,6 @@
-package main.java.interface_adapter.portfolio;
+package interface_adapter.portfolio;
 
-import main.java.interface_adapter.ViewModel;
+import interface_adapter.ViewModel;
 
 public class PortfolioMenuViewModel extends ViewModel<PortfolioMenuState> {
 

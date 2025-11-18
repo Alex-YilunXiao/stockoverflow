@@ -1,6 +1,6 @@
-package main.java.use_case.portfolio.addStock;
+package use_case.portfolio.addStock;
 
-import main.java.entities.Portfolio.Portfolio;
+import entities.Portfolio.Portfolio;
 
 public class AddStockMenuInteractor implements AddstockMenuInputBoundary{
 

@@ -1,4 +1,5 @@
 package app;
+import javax.swing.*;
 
 
 public class MainMenu {
@@ -7,6 +8,15 @@ public class MainMenu {
         final MainMenuBuilder builder = new MainMenuBuilder();
 //        Stock s = new Stock("ASDB", "asdasdasd");
 //        System.out.println(s.getTicker());
-        builder.addMainView().build().setVisible(true);
+        final JFrame application = builder
+                .addMainView()
+                .addCreatePortfolioView()
+                .addChangeViewUseCase()
+                .addMainViewUseCase()
+                .build();
+
+        application.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        application.setLocationRelativeTo(null);
+        application.setVisible(true);
     }
 }

@@ -1,6 +1,6 @@
-package main.java.interface_adapter.portfolio.addStock;
+package interface_adapter.portfolio.addStock;
 
-import main.java.use_case.portfolio.addStock.AddStockMenuOutputBoundary;
+import use_case.portfolio.addStock.AddStockMenuOutputBoundary;
 
 public class AddStockMenuPresenter implements AddStockMenuOutputBoundary {
     private final AddStockMenuViewModel addStockMenuViewModel;

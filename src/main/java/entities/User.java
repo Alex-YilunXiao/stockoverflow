@@ -1,4 +1,4 @@
-package main.java.entities;
+package entities;
 
 // import lombok.Getter;
 // import lombok.Setter;

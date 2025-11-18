@@ -1,4 +1,4 @@
-package main.java.interface_adapter.mainmenu;
+package interface_adapter.mainmenu;
 
 import java.util.Date;
 

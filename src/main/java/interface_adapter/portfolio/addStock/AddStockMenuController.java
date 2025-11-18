@@ -1,7 +1,7 @@
-package main.java.interface_adapter.portfolio.addStock;
+package interface_adapter.portfolio.addStock;
 
 import lombok.Getter;
-import main.java.use_case.portfolio.addStock.AddStockMenuInteractor;
+import use_case.portfolio.addStock.AddStockMenuInteractor;
 
 public class AddStockMenuController {
     @Getter

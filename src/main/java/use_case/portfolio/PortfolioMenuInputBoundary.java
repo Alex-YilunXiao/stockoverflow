@@ -1,6 +1,6 @@
-package main.java.use_case.portfolio;
+package use_case.portfolio;
 
-import main.java.entities.Portfolio.Portfolio;
+import entities.Portfolio.Portfolio;
 
 import java.util.ArrayList;
 

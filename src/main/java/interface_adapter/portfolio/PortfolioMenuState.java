@@ -1,6 +1,6 @@
-package main.java.interface_adapter.portfolio;
+package interface_adapter.portfolio;
 
-import main.java.entities.Portfolio.Portfolio;
+import entities.Portfolio.Portfolio;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

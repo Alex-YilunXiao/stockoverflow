@@ -1,4 +1,4 @@
-package main.java.entities.Portfolio;
+package entities.Portfolio;
 
 import java.time.LocalTime;
 import java.util.ArrayList;

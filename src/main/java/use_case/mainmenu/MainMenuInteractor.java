@@ -1,6 +1,6 @@
-package main.java.use_case.mainmenu;
+package use_case.mainmenu;
 
-import main.java.entities.User;
+import entities.User;
 
 public class MainMenuInteractor implements MainMenuInputBoundary{
     //private final NoteDataAccessInterface noteDataAccessInterface;
@@ -14,23 +14,24 @@ public class MainMenuInteractor implements MainMenuInputBoundary{
 
     @Override
     public void executeAnaylzePortfolio() {
-        mainMenuOutputBoundary.prepareSuccessView("we went to different main.java.view");
+        mainMenuOutputBoundary.prepareSuccessView("we went to different view");
     }
 
     @Override
     public void executeAnaylzeStock() {
-        mainMenuOutputBoundary.prepareSuccessView("we went to different main.java.view");
+        mainMenuOutputBoundary.prepareSuccessView("we went to different view");
     }
 
 
     @Override
     public void executeLoadStock() {
-        mainMenuOutputBoundary.prepareSuccessView("we went to different main.java.view");
+        mainMenuOutputBoundary.prepareSuccessView("we went to different view");
     }
 
     @Override
     public void executeExit() {
-        mainMenuOutputBoundary.prepareSuccessView("we went to different main.java.view");
+        mainMenuOutputBoundary.prepareSuccessView("we went to different view");
+        System.exit(0);
     }
 
 

@@ -1,4 +1,4 @@
-package main.java.use_case.portfolio.addStock;
+package use_case.portfolio.addStock;
 
 public interface AddstockMenuInputBoundary {
 
