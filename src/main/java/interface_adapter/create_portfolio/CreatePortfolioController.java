@@ -1,8 +1,6 @@
 package interface_adapter.create_portfolio;
 
 import use_case.create_portfolio.CreatePortfolioInputBoundary;
-import use_case.create_portfolio.CreatePortfolioInteractor;
-import use_case.mainmenu.MainMenuInputBoundary;
 
 public class CreatePortfolioController {
     private final CreatePortfolioInputBoundary createPortfolioInteractor;

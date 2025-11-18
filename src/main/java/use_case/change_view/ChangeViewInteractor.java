@@ -19,4 +19,10 @@ public class ChangeViewInteractor implements ChangeViewInputBoundary {
         final ChangeViewOutputData outputData = new ChangeViewOutputData("CreatePortfolioMenu");
         changeScreenPresenter.prepareView(outputData);
     }
+
+    @Override
+    public void changeToPortfolio() {
+        final ChangeViewOutputData outputData = new ChangeViewOutputData("PortfolioMenu");
+        changeScreenPresenter.prepareView(outputData);
+    }
 }

@@ -19,6 +19,9 @@ public class ChangeViewController {
             case "CreatePortfolioMenu":
                 changeViewInteractor.changeToCreatePortfolio();
                 break;
+            case "PortfolioMenu":
+                changeViewInteractor.changeToPortfolio();
+                break;
             default:
                 System.out.println(viewName + " view dont exist");
                 break;

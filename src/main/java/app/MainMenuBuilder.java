@@ -7,6 +7,7 @@ import interface_adapter.create_portfolio.CreatePortfolioViewModel;
 import interface_adapter.mainmenu.MainMenuController;
 import interface_adapter.mainmenu.MainMenuPresenter;
 import interface_adapter.mainmenu.MainMenuViewModel;
+import interface_adapter.portfolio.PortfolioMenuViewModel;
 import use_case.change_view.ChangeViewInputBoundary;
 import use_case.change_view.ChangeViewInteractor;
 import use_case.change_view.ChangeViewOutputBoundary;
@@ -15,6 +16,7 @@ import use_case.mainmenu.MainMenuInteractor;
 import use_case.mainmenu.MainMenuOutputBoundary;
 import view.CreatePortfolioView;
 import view.MainMenuView;
+import view.PortfolioMenuView;
 import view.ViewManager;
 
 import javax.swing.*;
@@ -34,6 +36,8 @@ public class MainMenuBuilder {
     private MainMenuView mainMenuView;
     private CreatePortfolioViewModel createPortfolioViewModel;
     private CreatePortfolioView createPortfolioView;
+    private PortfolioMenuViewModel portfolioMenuViewModel;
+    private PortfolioMenuView portfolioMenuView;
 
     public MainMenuBuilder() {
         cardPanel.setLayout(cardLayout);
@@ -53,6 +57,15 @@ public class MainMenuBuilder {
         createPortfolioView = new CreatePortfolioView(createPortfolioViewModel);
         cardPanel.add(createPortfolioView, createPortfolioView.getViewName());
         viewManager.addView(createPortfolioView.getViewName(), createPortfolioView);
+
+        return this;
+    }
+
+    public MainMenuBuilder addPortfolioMenuView() {
+        portfolioMenuViewModel = new PortfolioMenuViewModel();
+        portfolioMenuView = new PortfolioMenuView(portfolioMenuViewModel);
+        cardPanel.add(portfolioMenuView, portfolioMenuView.getViewName());
+        viewManager.addView(portfolioMenuView.getViewName(), portfolioMenuView);
 
         return this;
     }

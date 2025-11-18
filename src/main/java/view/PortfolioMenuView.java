@@ -15,6 +15,8 @@ import java.util.Map;
 
 public class PortfolioMenuView extends JPanel implements ActionListener, PropertyChangeListener {
 
+    private final String viewName = "PortfolioMenu";
+
     private final PortfolioMenuViewModel portfolioMenuViewModel;
     private final PortfolioMenuController portfolioMenuController;
 
@@ -148,6 +150,10 @@ public class PortfolioMenuView extends JPanel implements ActionListener, Propert
             checkBoxPanel.add(tickerPanel);
             jPanelMap.put(checkBox, tickerPanel);
         }
+    }
+
+    public String getViewName() {
+        return viewName;
     }
 
     @Override

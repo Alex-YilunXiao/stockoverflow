@@ -11,6 +11,7 @@ public class MainMenu {
         final JFrame application = builder
                 .addMainView()
                 .addCreatePortfolioView()
+                .addPortfolioMenuView()
                 .addChangeViewUseCase()
                 .addMainViewUseCase()
                 .build();

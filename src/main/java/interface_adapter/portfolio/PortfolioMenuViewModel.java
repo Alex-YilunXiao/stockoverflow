@@ -4,8 +4,8 @@ import interface_adapter.ViewModel;
 
 public class PortfolioMenuViewModel extends ViewModel<PortfolioMenuState> {
 
-    public String title_lable = this.getState().getPortfolio() == null ?
-            "Portfolio" : this.getState().getPortfolio().getName();
+//    public String title_lable = this.getState().getPortfolio() == null ?
+//            "Portfolio" : this.getState().getPortfolio().getName();
 
     public static final String ADD_BUTTON_LABEL = "Add Stock";
     public static final String REMOVE_BUTTON_LABEL = "Remove Selected Stocks";

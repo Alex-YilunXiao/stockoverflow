@@ -51,8 +51,7 @@ public class MainMenuView extends JPanel implements ActionListener, PropertyChan
         analyzePortfolioButton.addActionListener(
                 evt -> {
                     if (evt.getSource().equals(analyzePortfolioButton)) {
-                        //MainMenuController.execute(noteInputField.getText());
-
+                        changeViewController.changeView("PortfolioMenu");
                     }
                 }
         );
